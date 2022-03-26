@@ -1,0 +1,31 @@
+{
+  "name": "module-federation",
+  "version": "1.0.0",
+  "description": "module federation playground",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run init",
+    "init": "npm-run-all install:*",
+    "install:app1": "cd app1 && npm install --legacy-peer-deps",
+    "install:app2": "cd app2 && npm install --legacy-peer-deps",
+    "install:store": "cd root-app && npm install --legacy-peer-deps",
+    "start": "concurrently 'npm:start:app:*'",
+    "start:app:app1": "cd app1 && npm start",
+    "start:app:app2": "cd app2 && npm start",
+    "start:app:store": "cd root-app && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghelanijimmy/module-federation-playground.git"
+  },
+  "author": "Jimmy Ghelani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghelanijimmy/module-federation-playground/issues"
+  },
+  "homepage": "https://github.com/ghelanijimmy/module-federation-playground#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
