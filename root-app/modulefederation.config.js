@@ -1,25 +1,25 @@
-const deps = require('./package.json').dependencies;
+const deps = require("./package.json").dependencies;
 module.exports = {
-	name: 'store',
-	filename: 'remoteEntry.js',
-	exposes: {
-		"./Store":"./src/bootstrap.js"
-	},
-	shared: [
-		{
-			react: {
-				singleton: true,
-				eager: true,
-				requiredVersion: deps["react"]
-			},
-			"react-dom": {
-				singleton: true,
-				eager: true,
-				requiredVersion: deps["react-dom"]
-			},
-		}
-	]
-}
+  name: "store",
+  filename: "remoteEntry.js",
+  exposes: {
+    "./Store": "./src/bootstrap.js",
+  },
+  shared: [
+    {
+      react: {
+        singleton: true,
+        eager: true,
+        requiredVersion: deps["react"],
+      },
+      "react-dom": {
+        singleton: true,
+        eager: true,
+        requiredVersion: deps["react-dom"],
+      },
+    },
+  ],
+};
 
 //shared: [
 //         "react",
