@@ -1,9 +1,14 @@
-const cracoModuleFederation = require('craco-module-federation');
+const cracoModuleFederation = require("craco-module-federation");
 
 module.exports = {
-	plugins: [
-		{
-			plugin: cracoModuleFederation
-		}
-	]
-}
+  devServer: {
+    devMiddleware: {
+      writeToDisk: true,
+    },
+  },
+  plugins: [
+    {
+      plugin: cracoModuleFederation,
+    },
+  ],
+};

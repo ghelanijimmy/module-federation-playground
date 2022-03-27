@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@module-federation/fmr": "^0.0.7",
     "craco-module-federation": "^1.1.0"
   }
 }
