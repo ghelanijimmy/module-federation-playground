@@ -7,6 +7,7 @@ module.exports = {
   },
   remotes: {
     app3: "store@http://localhost:3002/remoteEntry.js",
+    components: "uiLibrary@http://localhost:3003/remoteEntry.js",
   },
   shared: [
     {
